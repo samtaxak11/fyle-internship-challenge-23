@@ -1,1 +1,12 @@
-<p>util-user-profile-loader works!</p>
+<div class="w-full flex flex-col mt-6">
+    <ngx-skeleton-loader count="1" appearance="circle" [theme]="skeletonThemeCircle"
+      [animation]="getSkeletonAnimation()"></ngx-skeleton-loader>
+    <ngx-skeleton-loader [theme]="skeletonTheme" class="w-full" count="1" [animation]="getSkeletonAnimation()">
+    </ngx-skeleton-loader>
+    <ngx-skeleton-loader [theme]="skeletonTheme" class="w-full" count="1" [animation]="getSkeletonAnimation()">
+    </ngx-skeleton-loader>
+    <ngx-skeleton-loader [theme]="skeletonTheme" class="w-full" count="1" [animation]="getSkeletonAnimation()">
+    </ngx-skeleton-loader>
+    <ngx-skeleton-loader [theme]="skeletonTheme" class="w-full" count="1" [animation]="getSkeletonAnimation()">
+    </ngx-skeleton-loader>
+  </div>

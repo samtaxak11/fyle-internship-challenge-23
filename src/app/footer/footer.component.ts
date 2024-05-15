@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Developer } from '../models/Developer';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-
+  @Input() appTitle: string = '';
+  @Input() appTheme: string = '';
+  @Input() currentYear: number = 0;
+  @Input() developer: Developer = {
+    name: '',
+    githubUrl: '',
+  };
 }

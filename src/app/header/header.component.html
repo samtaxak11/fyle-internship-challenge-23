@@ -1,1 +1,40 @@
-<p>header works!</p>
+<!-- Header Component -->
+<header
+  class="w-full flex items-center justify-between fixed top-0 py-3 px-6 border-b z-10 border-edge-dark"
+  [class]="
+    appTheme === 'light'
+      ? 'bg-card-light border-edge-light text-txt-light'
+      : 'bg-card-dark border-edge-dark text-txt-dark'
+  "
+>
+  <!-- Application Logo -->
+  <div class="flex items-center justify-between">
+    <div>
+      <i class="text-3xl px-2 fa-brands fa-github"></i>
+    </div>
+
+    <!-- Application Brand name -->
+    <div class="text-xl font-semibold">
+      <h3>
+        {{ appTitle }}
+      </h3>
+    </div>
+  </div>
+
+  <!-- Theme Toggle Button -->
+  <div
+    (click)="toggleTheme()"
+    class="flex justify-center items-center select-none px-3 py-1 rounded-lg border border-edge-dark cursor-pointer"
+    [class]="appTheme === 'light' ? 'border-edge-light' : 'border-edge-dark'"
+  >
+    <span class="font-medium">Theme</span>
+    <span class="py-0 text-center w-10 focus:outline-none">
+      <span *ngIf="appTheme === 'light'">
+        <i class="fas fa-moon text-xl"></i>
+      </span>
+      <span *ngIf="appTheme === 'dark'">
+        <i class="fas fa-sun text-xl"></i>
+      </span>
+    </span>
+  </div>
+</header>

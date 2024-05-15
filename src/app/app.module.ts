@@ -32,6 +32,7 @@ import { UtilUserRepoLoaderComponent } from './main-geist/util-user-repo-loader/
     UtilUserRepoLoaderComponent,
   ],
   imports: [
+    BrowserModule,
     HttpClientModule,
     FormsModule,
     NgxSkeletonLoaderModule,

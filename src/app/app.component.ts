@@ -8,7 +8,7 @@ import { Developer } from './models/Developer';
 })
 export class AppComponent implements OnInit {
   // Application title
-  appTitle: string = 'GitUsers';
+  appTitle: string = 'GitLook';
 
   // Application theme (initially set to dark)
   appTheme: string = 'dark';
@@ -18,8 +18,8 @@ export class AppComponent implements OnInit {
 
   // Developer information
   developer: Developer = {
-    name: 'SahilK-027',
-    githubUrl: 'https://github.com/SahilK-027',
+    name: 'Sourabh Takshak',
+    githubUrl: 'https://github.com/samtaxak11',
   };
 
   // EventEmitter for notifying theme changes to parent components

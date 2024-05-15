@@ -1,1 +1,22 @@
-<p>user-input works!</p>
+<!-- User Input -->
+
+<h3 class="font-semibold text-3xl pt-10 lg:pt-20 md:pt-20 pl-0 lg:pl-8 md:pl-8 pr-0 mb-4">
+    Let the search begin...
+  </h3>
+  
+  <!-- Input Form -->
+  <form class="flex pl-0 lg:pl-8 md:pl-8 items-center lg:space-x-2 pt-3">
+    <!-- GitHub Username Input -->
+    <input
+      class="text-txt-dark font-semibold border rounded-lg px-4 w-60 py-2 md:w-2/3 lg:w-1/2 focus:outline-none focus:border-cyan"
+      [class]="appTheme === 'light'
+      ? 'bg-back-light border-edge-light text-txt-light'
+      : 'bg-back-dark border-edge-dark text-txt-dark'" type="text" placeholder="Enter GitHub Username" name="username"
+      [(ngModel)]="username" />
+    <!-- Search Button -->
+    <button class="border border-edge-dark mt-0 font-semibold px-4 py-2 ml-2 rounded-lg lg:ml-10" [class]="appTheme === 'light'
+      ? 'bg-back-dark border-edge-dark text-txt-dark'
+      : 'bg-back-light border-edge-light text-txt-light'" type="button" (click)="emitSearchResult()">
+      Search
+    </button>
+  </form>

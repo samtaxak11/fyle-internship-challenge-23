@@ -1,1 +1,33 @@
-<p>footer works!</p>
+<!-- Footer Component -->
+<div
+  class="flex justify-center items-center gap-3 w-full p-3.5 z-10 relative"
+  [class]="
+    appTheme === 'light'
+      ? 'bg-back-light border-edge-light text-sub-txt-light '
+      : 'bg-back-dark border-edge-dark text-sub-txt-dark'
+  "
+>
+  <!-- GitHub Logo -->
+  <div>
+    <p>
+      <i class="text-sub-text-color text-2xl fa-brands fa-github"></i>
+    </p>
+  </div>
+
+  <!-- Copyright Information -->
+  <div>
+    <p id="copyright-text">
+      © {{ currentYear }} {{ appTitle }} - All rights reserved | Designed & Developed by 
+      <a
+        class="underline cursor-pointer"
+        target="_blank"
+        [href]="developer.githubUrl"
+        [class]="
+          appTheme === 'light' ? 'hover:text-txt-light' : 'hover:text-txt-dark'
+        "
+      >
+        {{ developer.name }}
+      </a>
+    </p>
+  </div>
+</div>
