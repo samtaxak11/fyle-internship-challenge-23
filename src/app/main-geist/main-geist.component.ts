@@ -54,7 +54,7 @@ export class MainGeistComponent {
       this.searchUserDetails();
       this.searchUserRepositories();
     } else {
-      window.alert('enter valid name');
+      window.alert('Enter a valid username');
     }
   }
 
@@ -109,7 +109,7 @@ export class MainGeistComponent {
 
   // Private method to handle errors by displaying an alert
   private handleError(errorMessage: string): void {
-    console.log(errorMessage)
+    console.log(errorMessage);
   }
 
   // Private method to scroll to the search result section

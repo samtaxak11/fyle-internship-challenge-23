@@ -1,16 +1,35 @@
 <div class="w-full flex flex-col">
-    <div class="my-3 border-2 border-edge-dark p-3"
-    [class] = "appTheme === 'light'
-    ? 'border-edge-light'
-    : 'border-edge-dark'
-    ">
-      <ngx-skeleton-loader [theme]="skeletonTheme" class="w-full" count="1" [animation]="getSkeletonAnimation()">
-      </ngx-skeleton-loader>
-      <ngx-skeleton-loader [theme]="skeletonTheme" class="w-full" count="1" [animation]="getSkeletonAnimation()">
-      </ngx-skeleton-loader>
-      <ngx-skeleton-loader [theme]="skeletonTheme" class="w-full" count="1" [animation]="getSkeletonAnimation()">
-      </ngx-skeleton-loader>
-      <ngx-skeleton-loader [theme]="skeletonTheme" class="w-full" count="1" [animation]="getSkeletonAnimation()">
-      </ngx-skeleton-loader>
-    </div>
+  <div
+    class="my-3 border-2 border-edge-dark p-3"
+    [class]="appTheme === 'light' ? 'border-edge-light' : 'border-edge-dark'"
+  >
+    <ngx-skeleton-loader
+      [theme]="skeletonTheme"
+      class="w-full"
+      count="1"
+      [animation]="getSkeletonAnimation()"
+    >
+    </ngx-skeleton-loader>
+    <ngx-skeleton-loader
+      [theme]="skeletonTheme"
+      class="w-full"
+      count="1"
+      [animation]="getSkeletonAnimation()"
+    >
+    </ngx-skeleton-loader>
+    <ngx-skeleton-loader
+      [theme]="skeletonTheme"
+      class="w-full"
+      count="1"
+      [animation]="getSkeletonAnimation()"
+    >
+    </ngx-skeleton-loader>
+    <ngx-skeleton-loader
+      [theme]="skeletonTheme"
+      class="w-full"
+      count="1"
+      [animation]="getSkeletonAnimation()"
+    >
+    </ngx-skeleton-loader>
   </div>
+</div>
