@@ -54,7 +54,7 @@ export class MainGeistComponent {
       this.searchUserDetails();
       this.searchUserRepositories();
     } else {
-      window.alert('Enter a valid username');
+      window.alert('Enter a valid name');
     }
   }
 

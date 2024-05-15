@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
    * @params None
    * @returns None
    */
-  ngOnInit(): void {
+  ngOnInit():void {
     this.themeChanged.emit(this.appTheme);
   }
 
@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
    * @params None
    * @returns None
    */
-  toggleTheme(): void {
+  toggleTheme():void {
     // Remove the current theme class from the body
     document.body.classList.remove(this.appTheme);
 
