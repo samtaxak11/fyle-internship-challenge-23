@@ -24,7 +24,7 @@
   <!-- profile details -->
   <div class="flex flex-col">
     <!-- bio -->
-    <p class="mb-4">{{searchedUser?.bio}}</p>
+    <p *ngIf="searchedUser?.bio" class="mb-4">{{searchedUser?.bio}}</p>
 
     <!-- followers following -->
     <div class="flex items-center text-sm mb-2">
@@ -56,7 +56,7 @@
     </div>
 
     <!-- location -->
-    <div class="flex items-center">
+    <div *ngIf="searchedUser?.location" class="flex items-center">
       <i
         class="fas fa-location-dot mr-1"
         [class]="
