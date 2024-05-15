@@ -44,8 +44,8 @@
       (change)="itemsPerPageChange.emit(itemsPerPage)"
       class="border rounded-md px-2 py-1.5 focus:outline-none"
       [class]="appTheme === 'light' 
-      ? 'text-txt-dark'
-      : 'text-txt-light'
+      ? 'bg-back-dark text-txt-dark border border-edge-dark'
+      : bg-back-light text-txt-light border border-edge-light'
       "
     >
       <!-- Iterate over items per page options and display each as an option -->
