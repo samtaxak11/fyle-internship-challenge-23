@@ -1,3 +1,4 @@
+<!-- Display repositories if there are any, otherwise show a message -->
 <div
   *ngIf="repos.length; else no_repo"
   [class]="
@@ -5,6 +6,7 @@
       ? 'bg-back-light border-edge-light'
       : 'bg-back-dark border-edge-dark'
   "
+
 >
   <!-- Display a list of repositories in a flex container with some styling -->
   <ul class="flex flex-wrap gap-4 list-none">
@@ -20,11 +22,11 @@
           class="shadow-md p-4 cursor-pointer border border-edge-dark rounded-md"
           [class]="
             appTheme === 'light'
-              ? 'bg-card-light border-edge-light'
-              : 'bg-card-dark border-edge-dark'
+              ? 'bg-card-light border-edge-light hover:border-cyan transition duration-300 ease-in-out'
+              : 'bg-card-dark border-edge-dark hover:border-cyan transition duration-300 ease-in-out'
           "
         >
-          <h3 class="text-xl font-semibold mb-2">{{ repo.name }}</h3>
+          <h3 class="text-xl font-semibold mb-2"><i class="fa-solid fa-file-code"></i> {{ repo.name }}</h3>
           <p class="text-gray-500 text-sm mb-2">
             {{ repo.created_at | date : "mediumDate" }}
           </p>
@@ -57,3 +59,8 @@
     </li>
   </ul>
 </div>
+
+<ng-template #no_repo>
+  <!-- Display a message when no repositories are found -->
+  <p>No repositories found.</p>
+</ng-template>
